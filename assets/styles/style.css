@@ -162,7 +162,7 @@
     text-align: center;
     color: white;
     overflow: hidden;
-    
+   
   }
 
   /* Overlay layers */
@@ -400,6 +400,8 @@ margin: 0 40px;
 .faq-section {
   background-color: var(--off-white);
   padding: 4rem 1.25rem;
+    color: var(--dark-navy);
+
 }
 
 .faq-section p {
@@ -417,18 +419,19 @@ font-size: 1rem;
 
 
 
-  #faqAccordion {
+  .accordion {
   width: 100%;
   max-width: 700px;
   margin: var(--space-lg) auto;
   border: none;
+  background: var(--off-white);
 }
 
 .accordion-item {
   border-bottom: 1px solid var(--gold);
 }
 
-.accordion-header {
+.accordion h3 {
   width: 100%;
   background: none;
   border: none;
@@ -439,33 +442,43 @@ font-size: 1rem;
   cursor: pointer;
 }
 
-#faqAccordion h3 {
+#accordion h3 {
   font-family: var(--font-primary);
   font-size: 1.2rem;
   font-weight: 500;
   margin: 0;
   text-align: left;
+    padding: 1rem 0;
+border-bottom: 1px solid var(--gold);
+position: relative;
+  padding-right: 2rem; 
+  color: var(--dark-navy);
+
 
 }
 
-#faqAccordion .icon {
-  font-size: 1.25rem;
+.accordion-content p {
+  padding: var(--space-sm) 0;
+  color: var(--dark-navy);
+}
+
+/* The + icon */
+#accordion h3::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
   transition: transform 0.2s ease;
 }
 
-.accordion-content {
-  display: none;
-  padding: 0 0 1rem 0;
-  font-size: 1rem;
-  color: var(--navy);
+/* When active, rotate + into × */
+#accordion .ui-accordion-header-active::after {
+  content: "×";
+  transform: translateY(-50%) rotate(0deg);
+  color: #D6C39D;
 }
-
-/* Icon rotates ( + becomes × ) */
-#faqAccordion.active .icon {
-  transform: rotate(45deg);
-}
-
-
 
 
 

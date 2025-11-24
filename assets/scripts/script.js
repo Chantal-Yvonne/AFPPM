@@ -27,15 +27,10 @@ navLinks.forEach(link => {
 
 
     // ========== FAQ ACCORDION ==========
-   $(function () {
-  $(".accordion").accordion({ 
+$(function() {
+  $("#accordion").accordion({
     collapsible: true,
-    heightStyle: "content",
     active: false,
-    icons: {
-      header: "ui-icon-plus",
-      activeHeader: "ui-icon-minus"
-    }
   });
 });
     
