@@ -24,13 +24,33 @@ navLinks.forEach(link => {
 
 
 
+$(document).ready(function(){
+  $('.testimonial-cards').slick({
+    arrows: false, // hide default arrows
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2300,
+  });
+
+  $('.custom-prev').click(function() {
+    $('.testimonial-cards').slick('slickPrev');
+  });
+  
+  $('.custom-next').click(function() {
+    $('.testimonial-cards').slick('slickNext');
+  });
+
 
 
     // ========== FAQ ACCORDION ==========
-$(function() {
-  $("#accordion").accordion({
-    collapsible: true,
-    active: false,
-  });
+    $(function() {
+      $("#accordion").accordion({
+        collapsible: true,
+        active: false,
+      });
+    });
+      
+
 });
-    
+  

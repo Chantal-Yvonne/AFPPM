@@ -75,7 +75,7 @@
    ======================*/
   .header {
     /* background: #fff; */
-    padding: var(--space-sm) 0;
+    padding:0 var(--space-sm) ;
     position: absolute;
     z-index: 1;
     width: 100%;
@@ -92,7 +92,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: var(--cream);
+    color: var(--off-white);
 
   }
   
@@ -105,7 +105,7 @@
   
   .mobile-nav a {
     text-decoration: none;
-    color: var(--dark-navy);
+    color: var(--off-white);
   }
 
   .mobile-nav a:nth-child(2)  {
@@ -144,17 +144,23 @@
     cursor: pointer;
     margin-bottom: 20px;
   }
+
+
+  .head-logo img {
+    max-width: 30%;
+    /* border: 1px solid red; */
+  }
 /* ====================
             HERO 
    ======================*/
 
-.hero {
+   .hero {
     position: relative;
     width: 100%;
     height: 110vh;
     background-image: url("../images/hero-image.jpg");
     background-size: cover;
-    background-position: 0px 0px;
+    background-position: center;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
@@ -162,27 +168,33 @@
     text-align: center;
     color: white;
     overflow: hidden;
-   
-  }
-
-  /* Overlay layers */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* top dark overlay and bottom navy fade */
-  background: linear-gradient(
-    rgba(0, 0, 0, 0) 60%,    /* gradient starts lower */
-    #00060D 100%
-  ),
-    linear-gradient(to bottom, rgba(26, 26, 26, 0) 100%, #00060D 120%);
-  z-index: 1;
-
+    z-index: 0;
 }
 
+/* Overlay layer */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* lighter dark overlay + your gradient */
+    background: 
+        linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), /* subtle dark overlay */
+        linear-gradient(
+            rgba(0, 0, 0, 0) 60%,    /* gradient starts lower */
+            #00060D 100%
+        ),
+        linear-gradient(to bottom, rgba(26, 26, 26, 0) 100%, #00060D 120%);
+    z-index: 1;
+}
+
+/* Make hero content appear above overlay */
+.hero > * {
+    position: relative;
+    z-index: 2;
+}
 .hero h1 {
   font-size: clamp(2rem, 4vw, 4rem);
   margin-bottom: var(--space-sm);
@@ -334,9 +346,8 @@ margin: 0 40px;
   color: var(--off-white);
 }
 
-.testimonial-card {
-  width:50% ;
-}
+
+
 .testimonials p:nth-child(2) {
   font-size: 0.875rem;
   font-family: var(--font-secondary);
@@ -357,49 +368,69 @@ margin: 0 40px;
   display: flex;
 }
 .testimonial-card p {
-  /* width: 50%; */
   font-family: var(--font-primary);
   font-size: 1.275rem;
   color: var(--off-white);
-
+  width:50% ;
+  margin:var(--space-lg) auto;
 }
 
 .testimonial-card span {
   font-family: var(--font-secondary);
   font-size: 0.875rem;
   color: var(--off-white);
-
-
+  width:50% ;
+  margin: 0 292px;
 }
 
 
 .testimonials h3 {
   font-size: 1rem;
   font-family: var(--font-secondary);
-  font-weight: 700;
-  max-width: 700px;
+  font-weight: 600;
+  width: 50%;
   margin: var(--space-sm) 0;
   color: var(--off-white);
+  margin: auto;
 
 }
 
 
-.row {
+/* .row {
   margin-bottom: 40px;
   border-bottom: 1px solid var(--gold);
+} */
+
+.custom-prev {
+  background-color: var(--dark-navy);
+  border: none;
+  width:fit-content;
+  height: fit-content;
+  margin-right: 40px;
+}  
+
+.custom-next {
+  background-color: var(--dark-navy);
+  border: none;
+  width:fit-content;
+  height: fit-content;
+} 
+
+.slick-controls img {
+  width: 40px;
 }
 
-
-    
+.slick-controls {
+  margin-left: 1000px;
+}
 /* ====================
         FAQ 
    ======================*/  
 
 
-/* ========== FAQ SECTION ========== */
 .faq-section {
   background-color: var(--off-white);
-  padding: 4rem 1.25rem;
+  /* padding: 4rem 1.25rem; */
     color: var(--dark-navy);
 
 }
@@ -413,7 +444,8 @@ font-size: 1rem;
 .faq-section h2 {
   font-family: var(--font-primary);
   font-size: 2.5rem;
-  margin: var(--space-sm) 0;
+  margin: var(--space-sm) 0 var(--space-md);
+  font-weight: 400;
   }
 
 
@@ -482,10 +514,73 @@ position: relative;
 
 
 
+/* ====================
+           FOOTER 
+======================= */
+  .footer {
+    background: #111;
+    color: #fff;
+    /* text-align: center; */
+    padding: var(--space-md) 0;
+  }
+  
+.footer-info {
+  border-top: 1px solid var(--gold);
+}
+.cta-section h2 {
+  font-family: var(--font-primary);
+  font-size: clamp(2rem, 4vw, 6rem);
+  font-weight: 400;
+  margin: 40px 0;
+}
 
+.footer-right img {
+  max-width: 250px;
+}
 
+.footer-info {
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  gap: 20rem;
 
+}
 
+address {
+  font-style: normal;
+}
+
+.footer-left {
+  margin-top: var(--space-lg);
+}
+
+.footer-left h4 {
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.footer-left address a {
+  text-decoration: none;
+  margin: var(--space-lg) 0 ;
+  color: var(--off-white);
+}
+
+.footer-left p {
+  margin-top: var(--space-lg);
+
+}
+
+address span {
+  display: block;
+}
+.phone {
+  margin-bottom: 20px;
+}
+
+.phone a:hover, .email a:hover  {
+  color: var(--gold);
+}
 
 
 
@@ -588,11 +683,4 @@ position: relative;
   }
   /* -------- SERVICES -------- */
   
-  /* -------- FOOTER -------- */
-  .footer {
-    background: #111;
-    color: #fff;
-    text-align: center;
-    padding: var(--space-md) 0;
-  }
 

@@ -9,10 +9,11 @@
   <!-- css-->
   <link rel="stylesheet" href="./assets/styles/style.css">
 
+  <!--Slider-->
+  <link rel="stylesheet" type="text/css" href="./assets/scripts/slick-1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="./assets/scripts/slick-1.8.1/slick/slick-theme.css"/>
 
   <!-- jQuery -->
-
-
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
   
@@ -23,8 +24,9 @@
 
   <header class="header">
     <nav class="nav container">
-      <!-- <h1 class="logo">LOGO</h1> -->
-
+<div class="head-logo">
+  <img src="./assets/images/logo-and -icons/afppm-logo.png" alt="">
+</div>
       <!-- Hamburger -->
       <button class="menu-toggle" id="menuToggle">
         <span></span>
@@ -37,7 +39,7 @@
         <button class="close-btn" id="closeBtn">X</button>
         <a href="#">About</a>
         <a href="#">Services</a>
-        <a href="#">Get in Touch</a>
+        <a href="#contact" class="btn">Get in Touch</a>
       </div>
     </nav>
   </header>
@@ -45,11 +47,12 @@
 
 
   <section class="hero outer-container">
+    <div class="bg-overlay"></div>
     <div class=" hero-content">
       <h1>Delivering Project Management Excellence</h1>
       <p>We help organisations deliver complex projects and programmes with clarity, efficiency, and measurable results.
         From strategy to execution, our expertise ensures your initiatives stay on track and achieve their goals.</p>
-      <a href="#" class="btn">Get Started</a>
+      <!-- <a href="#" class="btn">Get Started</a> -->
     </div>
   </section>
 
@@ -112,7 +115,7 @@
       <h2 class="section-title">What Our Clients Say</h2>
 
       <div class="testimonial-cards">
-        <div class="testimonial-card"></div>
+        <!-- <div class="testimonial-card"></div> -->
         <div class="testimonial-card">
           <div class="row">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor labore iure dicta sit odio ducimus
@@ -121,6 +124,9 @@
             <h3>Farayi Kambarami - Head of Central Planning and Data</h3>
             <span>Woolworths South Africa</span>
           </div>
+        </div>
+          <div class="testimonial-card">
+
           <div class="row">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor labore iure dicta sit odio ducimus
               consectetur laboriosam sint molestias, consequatur omnis facere, officiis quis repudiandae adipisci animi
@@ -128,6 +134,9 @@
             <h3>Farayi Kambarami - Head of Central Planning and Data</h3>
             <span>Woolworths South Africa</span>
           </div>
+        </div>
+          <div class="testimonial-card">
+
           <div class="row">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor labore iure dicta sit odio ducimus
               consectetur laboriosam sint molestias, consequatur omnis facere, officiis quis repudiandae adipisci animi
@@ -137,12 +146,22 @@
           </div>
 
         </div>
+       
+      </div>
+      <div class="slick-controls">
+        <button class="custom-prev">
+          <img src="./assets/images/logo-and -icons/arrow-up-left-thin.png" alt="left arrow">
+        </button>
+        <button class="custom-next">
+          <img src="./assets/images/logo-and -icons/arrow-up-right-thin.png" alt="right arrow">
+        </button>
+      </div>
   </section>
   <!-- FAQ SECTION -->
   <section class="faq-section section">
     <div class="container">
       
-    </div>
+    
  <p>Faq</p>
  <h2>Got Questions? We&apos;ve Got Answers.</h2>
   <div id="accordion">
@@ -172,20 +191,43 @@
   </div>
 
 </div>
-  
+</div>
 </section>
 
 
 
-  <footer class="footer">
+  <footer class="footer section">
     <div class="container">
-      <p>AFPMM © 2025 Your Company</p>
+      <div class="cta-section">
+        <h2>Work with me.</h2>
+      </div>
+      <div class="footer-info">
+        <div class="footer-right">
+          <img src="./assets/images/logo-and -icons/afppm-logo.png" alt="company logo">
+
+      </div>
+        <div class="col" id="contact">
+          <div class="footer-left">
+              <address>
+                  <h4>Phone</h4>
+                  <span class="phone"><a href="tel:+27789087550">+27789087550</a></span>
+                  <h4>Email</h4>
+                  <span class="email"><a href="mailto:abdeyah@afppm.co.za">mailto:abdeyah@afppm.co.za</a></span>
+              </address>
+              <p>AFPMM © 2025 Your Company</p>
+
+          </div>
+      </div>
+      </div>
+
     </div>
+
   </footer>
 
 
 
   <script src="./assets/scripts/script.js"></script>
+  <script type="text/javascript" src="./assets/scripts/slick-1.8.1/slick/slick.min.js"></script>
 </body>
 
 </html>
