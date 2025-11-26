@@ -54,7 +54,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--space-sm);
-    /* border: 1px solid red; */
+    border: 1px solid red;
   }
   
   .outer-container {
@@ -250,6 +250,7 @@
   font-weight: 400;
   max-width: 700px;
   margin: var(--space-md) 0;
+  line-height: 1.2;
 }
 
 .about p:last-child {
@@ -589,9 +590,10 @@ address span {
 
 
 
-  /* ----------------------------------
-     MOBILE STYLES
+  /* ---------------------------------------------------------------------------------------
+     MEDIA QUERY
   ------------------------------------- */
+  /* TABLETS */
   @media (max-width: 768px) {
   
  
@@ -672,15 +674,141 @@ address span {
   .about-left,
   .about-right {
     max-width: 100%;         /* full width for mobile */
-    margin: 0 auto;          /* center if needed */
   }
 
   .about-right img {
     max-width: 90%;          /* scale image for mobile */
     height: auto;            /* maintain aspect ratio */
-    margin-top: var(--space-lg);
+    margin: 6rem 0 2rem;
   }
-  }
+
+.about-left-heading {
+  position: absolute;
+  top: 35px;
+  margin: 0 30px;          /* center if needed */
+    margin: 0 auto;          /* center if needed */
+
+}
+
+.about {
+  position: relative;
+  text-align: center;
+ 
+}
+
+.about-left-heading h2 {
+  font-size: 1.75rem;
+  margin: 0 ;
+}
+
+.about-left-heading h2 {
+  font-size: 1.75rem;
+  margin: 0 ;
+  line-height: 1.2;
+}
+
+.about-left-heading p {
+  margin: 0.5rem ;
+}
+
+.about-left p:last-child {
+  margin:0 auto;
+}
+
+.section {
+  padding: 3.75rem 0 ;
+}
+
+
+
+
+
   /* -------- SERVICES -------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+  }
   
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* PHONE */
+
+  @media (max-width: 768px) {
+.section {
+  padding: 0;  
+}
+  
+  /* -------- ABOUT -------- */
+  
+  .about-right img {
+    max-width: 90%;          /* scale image for mobile */
+    height: auto;            /* maintain aspect ratio */
+    margin: 9rem 0 2rem;
+  }
+
+/* .about-left-heading 
+  margin: 0 30px;          /* center if needed */
+ 
+
+
+.about {
+  position: relative;
+  text-align: center;
+  padding: 40px 0;
+ 
+}
+
+
+.about-left-heading h2 {
+  font-size: 1.75rem;
+  margin: 0 1.2rem 0 0;
+  line-height: 1.2;
+}
+
+.about-left-heading p {
+  margin: 0.5rem ;
+}
+
+.about-left p:last-child {
+  margin:0 auto;
+}
+
+.section {
+  padding: 3.75rem 0 ;
+}
+
+
+
+
+
+  /* -------- SERVICES -------- */
+}
