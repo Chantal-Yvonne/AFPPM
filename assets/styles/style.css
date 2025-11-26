@@ -52,7 +52,6 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--space-sm);
-    border: 1px solid red;
   }
   
   .outer-container {
@@ -856,7 +855,7 @@ bottom: 12px;
 
 
 
-  /* PHONE */
+  /* PHONE =========================================================================*/
 
   @media (max-width: 375px) {
 .section {
