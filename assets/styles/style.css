@@ -43,9 +43,7 @@
   }
   
   body {
-    font-family: Inter, sans-serif;
-    line-height: 1.6;
-    color: #111;
+   background-color: var(--off-white);
   }
   
   /* -------- GLOBAL CONTAINER -------- */
@@ -207,6 +205,7 @@
   max-width: 600px;
   margin-inline: auto;
   font-size: 1rem;
+  font-family:var(--font-primary);
 
 }
 
@@ -422,7 +421,8 @@ margin: 0 40px;
 }
 
 .slick-controls {
-  margin-left: 1000px;
+  margin-left: 62.5rem;
+  z-index:999;
 }
 /* ====================
         FAQ 
@@ -724,20 +724,108 @@ address span {
 
 
   /* -------- SERVICES -------- */
+/* .services p:first-child {
+    font-size: 0.875rem;
+    font-family: var(--font-secondary);
+    
+  } */
+  .services {
+  text-align:center;
+  
+  }
 
+  .services h2 {
+    font-size: 1.75rem;
+    margin: var(--space-xs) 0;
+  }
 
-
-
-
-
-
-
-
-
-
-
+ .services-grid {
+    margin-top: var(--space-xl);
+   grid-template-columns: 1fr;
+  }
+ 
+  .service-card {
+    border: none;
 
   }
+
+  .service-card img{
+width: 50%;
+height: 50%; 
+/* margin-top: var(--space-md); */
+} 
+
+.service-card p {
+border-bottom: 1px solid var(--gold);
+padding-bottom: 10px;
+}
+
+.service-card:nth-child(3) {
+position: relative;
+/* bottom: 24px; */
+}
+
+.service-card:nth-child(4) {
+position: relative;
+bottom: 12px;
+}
+
+/* TESTIMONIALS */
+
+
+.testimonials {
+  margin: 6rem 0 3.5rem;
+  padding-bottom: 0;
+}
+
+
+
+.testimonial-card p {
+  width:80% ;
+}
+
+.testimonial-card h3 {
+  font-size: 0.875rem;
+}
+
+.testimonial-card span {
+  font-size: 0.875rem;
+  margin: 15px 85px;
+}
+
+
+/* FAQ  */ 
+
+.faq-section {
+  padding-top: 0;
+}
+
+
+
+.faq-section h2 {
+  font-size: 1.75rem;
+}
+
+
+/* CTA SECTION */
+.footer {
+
+    text-align: center;
+}
+
+.footer-info {
+  display: block;
+}
+
+
+
+
+
+}
+
+
+
+  
   
 
 
@@ -795,20 +883,78 @@ address span {
 }
 
 .about-left-heading p {
-  margin: 0.5rem ;
+  margin: 0.5rem 1rem 0 0 ;
 }
 
 .about-left p:last-child {
   margin:0 auto;
+  width: 80%;
 }
 
 .section {
   padding: 3.75rem 0 ;
 }
 
-
-
-
-
   /* -------- SERVICES -------- */
+  /* .services {
+    height: 100vh;
+  } */
+
+.service-card:nth-child(2) {
+position: relative;
+top: 60px;
+}
+
+.service-card:nth-child(3) {
+position: relative;
+top: 105px;
+}
+
+.service-card:nth-child(4) {
+position: relative;
+top: 180px;
+}
+
+ .services-grid {
+    margin-top: var(--space-md);
+   
+  }
+
+/* Testimonials  */ 
+
+.testimonials {
+  margin: 6rem 0 3.5rem;
+  padding-bottom: 0;
+}
+
+
+
+.testimonial-card p {
+  width:80% ;
+}
+
+.testimonial-card h3 {
+  font-size: 0.875rem;
+}
+
+.testimonial-card span {
+  font-size: 0.875rem;
+  margin: 15px 85px;
+}
+
+
+/* FAQ  */ 
+
+.faq-section {
+  padding-top: 0;
+}
+
+
+
+.faq-section h2 {
+  font-size: 1.75rem;
+}
+
+
+
 }
