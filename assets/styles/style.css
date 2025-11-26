@@ -565,10 +565,12 @@ address {
   text-decoration: none;
   margin: var(--space-lg) 0 ;
   color: var(--off-white);
+  font-family: var(--font-secondary);
 }
 
 .footer-left p {
   margin-top: var(--space-lg);
+  font-family: var(--font-secondary);
 
 }
 
@@ -786,6 +788,8 @@ bottom: 12px;
 
 .testimonial-card h3 {
   font-size: 0.875rem;
+    margin: 15px 85px;
+
 }
 
 .testimonial-card span {
@@ -793,6 +797,10 @@ bottom: 12px;
   margin: 15px 85px;
 }
 
+.slick-controls {
+  margin:40px 74px;
+  
+}
 
 /* FAQ  */ 
 
@@ -850,7 +858,7 @@ bottom: 12px;
 
   /* PHONE */
 
-  @media (max-width: 768px) {
+  @media (max-width: 375px) {
 .section {
   padding: 0;  
 }
@@ -935,14 +943,19 @@ top: 180px;
 
 .testimonial-card h3 {
   font-size: 0.875rem;
+    margin: 15px 40px;
+
 }
 
 .testimonial-card span {
   font-size: 0.875rem;
-  margin: 15px 85px;
+  margin: 15px 40px;
 }
 
-
+.slick-controls {
+  margin:40px 38px;
+  
+}
 /* FAQ  */ 
 
 .faq-section {
