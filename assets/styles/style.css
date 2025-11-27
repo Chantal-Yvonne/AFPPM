@@ -229,7 +229,7 @@ nav.scrolled {
 .hero-content {
   margin-top: var(--space-xl);
   position: relative;
-  z-index: 5;
+  z-index: 1;
 }
 
 /* ====================
@@ -434,7 +434,8 @@ margin: 0 40px;
 }
 
 .slick-controls {
-  margin: 2rem 0 0 60rem;
+  margin: 2rem 0 0 50rem;
+  padding-top:2rem;
   z-index:999;
 }
 /* ====================
@@ -708,6 +709,9 @@ address span {
   padding-bottom: 3.75rem;
 }
 
+.about-left p:first-child {
+  padding-bottom: 1rem;
+}
 .section {
   padding: 0rem 0 ;
 }
