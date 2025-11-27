@@ -187,7 +187,7 @@ nav.scrolled {
     top: 0;
     left: 0;
     width: 100%;
-    height: 110%;
+    height: 110vh;
     /* lighter dark overlay + your gradient*/ 
     background: 
         linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), /* subtle dark overlay */
@@ -228,6 +228,8 @@ nav.scrolled {
 
 .hero-content {
   margin-top: var(--space-xl);
+  position: relative;
+  z-index: 5;
 }
 
 /* ====================
@@ -764,7 +766,7 @@ bottom: 55px;
 .service-card:nth-child(4) {
 position: relative;
 bottom: 55px;
-
+border: none;
 }
 
 /* TESTIMONIALS */
@@ -793,7 +795,7 @@ bottom: 55px;
 }
 
 .slick-controls {
-  margin:40px 74px 0;
+  margin:40px 74px;
   
 }
 
@@ -827,7 +829,7 @@ margin-bottom: var(--space-lg);
 
 .footer-right img {
   max-width:9.375rem;
-  margin-top:2rem;
+  margin-top:3rem;
 }
 
 }
