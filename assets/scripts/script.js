@@ -1,29 +1,43 @@
 
 // HAMBURGER
-const menuToggle = document.getElementById("menuToggle");
-const mobileNav = document.getElementById("mobileNav");
-const closeBtn = document.getElementById("closeBtn");
+const navMenu = document.getElementById("navMenu");
+const openMenu = document.getElementById("openMenu");
+const closeMenu = document.getElementById("closeMenu");
+const navLinks = navMenu.getElementsByTagName("a");
 
-// Open menu
-menuToggle.addEventListener("click", () => {
-  mobileNav.classList.add("active");
+openMenu.addEventListener("click", function () {
+  navMenu.classList.add("active");
+  openMenu.classList.add("hidden");
+  document.body.style.overflow = "hidden";
 });
 
-// Close menu with "X"
-closeBtn.addEventListener("click", () => {
-  mobileNav.classList.remove("active");
+closeMenu.addEventListener("click", function () {
+  navMenu.classList.remove("active");
+  openMenu.classList.remove("hidden");
+  document.body.style.overflow = "auto";
 });
 
-// Close menu when clicking a link
-const navLinks = mobileNav.querySelectorAll("a");
-navLinks.forEach(link => {
-  link.addEventListener("click", () => {
-    mobileNav.classList.remove("active");
+// close menu when clicking any link
+for (var i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener("click", function () {
+    navMenu.classList.remove("active");
+    openMenu.classList.remove("hidden");
+    document.body.style.overflow = "auto";
   });
+}
+
+const nav = document.querySelector("nav");
+
+window.addEventListener("scroll", function() {
+  if (window.scrollY > 25) {  // adjust scroll value as needed
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
 });
 
 
-
+// SLIDER
 $(document).ready(function(){
   $('.testimonial-cards').slick({
     arrows: false, // hide default arrows

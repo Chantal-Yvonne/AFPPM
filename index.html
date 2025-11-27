@@ -21,29 +21,25 @@
 </head>
 
 <body>
-
-  <header class="header">
-    <nav class="nav container">
-<div class="head-logo">
-  <img src="./assets/images/logo-and -icons/afppm-logo.png" alt="">
-</div>
-      <!-- Hamburger -->
-      <button class="menu-toggle" id="menuToggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <!-- Mobile Slide-In Menu -->
-      <div class="mobile-nav" id="mobileNav">
-        <button class="close-btn" id="closeBtn">X</button>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#contact" class="btn">Get in Touch</a>
+<header class="header">
+    <nav>
+    <div class="nav-container">
+      <div class="head-logo">
+                  <img src="./assets/images/logo-and -icons/IMG_20251127_095746.png" alt="logo">
       </div>
-    </nav>
-  </header>
-
+  
+      <button class="hamburger" id="openMenu">&#9776;</button>
+  
+      <ul class="nav-menu" id="navMenu">
+        <button class="close-btn" id="closeMenu">&#10005;</button>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact" id="cta-btn">Get in Touch</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
 
   <section class="hero outer-container">
@@ -56,11 +52,11 @@
     </div>
   </section>
 
-  <section class="about section">
+  <section class="about section" id="about">
     <div class="container">
       <div class="flex-container">
         <div class="about-right">
-          <img src="./assets/images/girl.jpg" alt="girl">
+          <img src="./assets/images/IMG_20251127_095808.jpg" alt="girl">
         </div>
         <div class="about-left">
           <div class="about-left-heading">
@@ -78,7 +74,7 @@
     </div>
   </section>
 
-  <section class="services section">
+  <section class="services section" id="services">
     <div class="container">
       <p>Services</p>
       <h2> We offer a wide variety of consulting services</h2>
@@ -133,8 +129,8 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor labore iure dicta sit odio ducimus
               consectetur laboriosam sint molestias, consequatur omnis facere, officiis quis repudiandae adipisci animi
               neque eum cupiditate.</p>
-            <h3>Farayi Kambarami - Head of Central Planning and Data</h3>
-            <span>Woolworths South Africa</span>
+             <h3>Monogran Reddy - Project manager</h3>
+            <span>Al-Shaiya UAE</span>
           </div>
         </div>
           <div class="testimonial-card">
@@ -143,8 +139,8 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor labore iure dicta sit odio ducimus
               consectetur laboriosam sint molestias, consequatur omnis facere, officiis quis repudiandae adipisci animi
               neque eum cupiditate.</p>
-            <h3>Farayi Kambarami - Head of Central Planning and Data</h3>
-            <span>Woolworths South Africa</span>
+            <h3>Lisa Boyer - Director at Africa Aweee</h3>
+            <span>Austria</span>
           </div>
 
         </div>
@@ -205,7 +201,7 @@
       </div>
       <div class="footer-info">
         <div class="footer-right">
-          <img src="./assets/images/logo-and -icons/afppm-logo.png" alt="company logo">
+          <img src="./assets/images/logo-and -icons/IMG_20251127_095746.png" alt="company logo">
 
       </div>
         <div class="col" id="contact">
