@@ -177,7 +177,7 @@ nav.scrolled {
     text-align: center;
     color: white;
     overflow: hidden;
-    z-index: 0;
+    z-index: -0;
 }
 
 /* Overlay layer  */
@@ -196,7 +196,7 @@ nav.scrolled {
             #00060D 100%
         ),
         linear-gradient(to bottom, rgba(26, 26, 26, 0) 100%, #00060D 120%);
-    z-index: 0;
+    z-index: -0;
 }
 
 /* Make hero content appear above overlay */
@@ -229,7 +229,7 @@ nav.scrolled {
 .hero-content {
   margin-top: var(--space-xl);
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 
 /* ====================
@@ -621,10 +621,10 @@ address span {
   }
   .nav-menu {
     position: fixed;
-    top: 0;
+    top: -35px;
     right: -100%;
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     background-color: var(--dark-navy);
     flex-direction: column;
     align-items: center;
@@ -944,7 +944,7 @@ border:none;
 
 .testimonials {
   margin: 12rem 0 3.5rem;
-  padding-bottom: 0;
+  padding-bottom: 1rem;
 }
 
 
