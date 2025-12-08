@@ -79,14 +79,8 @@
     font-family: var(--font-secondary);
   }
   
-  .line {
-    border-bottom: 1px solid var(--off-white);
-    width: 90%;
-    margin: 15px auto;
-    
-  }
 nav {
-    padding: 1rem;
+    padding: 1rem 1rem 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -107,13 +101,13 @@ nav {
   display: flex;
   list-style: none;
   gap: 2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .nav-menu li a {
   color: var(--off-white);
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-family: var(--font-secondary);
 
 }
@@ -146,7 +140,8 @@ nav {
 
 
   .head-logo img {
-    max-width: 40%;
+    max-width: 30%;
+    padding-top: 0.5rem;
     /* border: 1px solid red; */
   }
 
@@ -214,6 +209,7 @@ nav.scrolled {
   margin:2rem auto;
   font-size: 1rem;
   font-family:var(--font-secondary);
+  line-height: 1.5;
 
 }
 
@@ -244,7 +240,7 @@ nav.scrolled {
   .flex-container {
     display: flex;
     flex-direction: row;
-    gap: 140px;
+    gap: 120px;
   }
 
 .about p:first-child {
@@ -270,7 +266,7 @@ nav.scrolled {
 }
 
 .about-right img {
-max-width: 463px;
+max-width: 480px;
 height: 700px;
 /* margin-top: var(--space-xl); */
 }
@@ -291,21 +287,23 @@ height: 700px;
   .services-grid {
     margin-top: var(--space-md);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    /* gap: var(--space-md); */
-    /* margin: var(--space-xl) auto; */
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    grid-template-rows: repeat(2, 1fr);    /* 2 rows */
+    /* gap: var(--space-lg); */
   }
   
   .service-card {
-    border-right: 1px solid var(--gold);
+    border: 1px solid var(--gold);
+    /* border-bottom: 1px solid var(--gold); */
+    height: 35rem;
 
   }
   
 
   .service-card img{
-width: 70%;
-height: 40%; 
-margin: 0 40px;
+width: 85%;
+height: 45%; 
+margin: 0 30px;
 } 
   .services p:first-child {
     font-size: 0.875rem;
@@ -318,11 +316,11 @@ margin: 0 40px;
     font-family: var(--font-primary);
     font-weight: 400;
     max-width: 700px;
-    margin: var(--space-md) 0;
+    margin: var(--space-md) 0 var(--space-lg);
   }
   
   .service-card:last-child {
-    border: none;
+    /* border: none; */
     
   }
 
@@ -342,14 +340,19 @@ margin: 0 40px;
       font-size: 0.875rem;
       font-weight: 400;
       padding: var(--space-xs) 0;
-      margin: var(--space-sm) auto;
+      margin: 0 auto;
       text-align: center;
       width: 80%;
 
       } 
 
+.service-card img {
+  margin-top: 3rem;
+}
 
-    
+.service-card:last-child {
+  /* border-bottom:1px solid var(--gold); */
+}
 /* ====================
         TESTIMONIALS 
    ======================*/  
